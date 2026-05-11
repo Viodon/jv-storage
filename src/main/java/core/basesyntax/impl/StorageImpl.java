@@ -19,7 +19,9 @@ public class StorageImpl<K, V> implements Storage<K, V> {
                 values[i] = value;
                 return;
             }
-
+            /*Шукає вільний слот для значення коли ключ не збігається з жодним іншим,
+            перевіряємо values[i]
+            перевіряємо values[i], тому що може бути значення з ключем null*/
             if (values[i] == null) {
                 values[i] = value;
                 keys[i] = key;
